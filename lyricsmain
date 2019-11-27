@@ -9,6 +9,8 @@ import java.io.*;
 public class lyrics {
 	
 
+	
+
 	public static void main (String [] args) throws FileNotFoundException {
 		Hashtable<String, Integer> wordTable = new Hashtable < String, Integer>();
 		Scanner scan = new Scanner(new File("C:\\Users\\Vanessa\\Desktop\\stopwords.txt"));
@@ -73,25 +75,7 @@ public class lyrics {
 	             
 	            //Getting the most repeated word and its occurrence
 	             
-	            String mostRepeatedWord = null;
-	             
-	            int count = 0;
-	             
-	            Set<Entry<String, Integer>> entrySet = wordTable.entrySet();
-	             
-	            for (Entry<String, Integer> entry : entrySet)
-	            {
-	                if(entry.getValue() > count)
-	                {
-	                    mostRepeatedWord = entry.getKey();
-	                     
-	                    count = entry.getValue();
-	                }
-	            }
-	             
-	            System.out.println("The most repeated word in input file is : "+mostRepeatedWord);
-	             
-	            System.out.println("Number Of Occurrences : "+count);
+	            
 	        } 
 	        catch (IOException e) 
 	        {
@@ -102,6 +86,7 @@ public class lyrics {
 	
 	    }   
 	
+
 
 
 
